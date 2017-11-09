@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <!--<jsp-version>2.1</jsp-version>-->
+    <short-name>connor-tag</short-name>
+    <uri>http://connor.com/jsp/core</uri>
+    <tag>
+        <name>iterator</name>
+        <tag-class>com.connor.tag.IteratorDirecitve</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>items</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String[]</type>
+        </attribute>
+        <attribute>
+            <name>var</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+    </tag>
+    <tag>
+        <name>choose</name>
+        <tag-class>com.connor.tag.ChooseDirective</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+    <tag>
+        <name>if</name>
+        <tag-class>com.connor.tag.IfDirective</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>test</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+
+    </tag>
+    <tag>
+        <name>otherwise</name>
+        <tag-class>com.connor.tag.OtherwiseDirective</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+    <tag>
+        <name>change</name>
+        <tag-class>com.connor.tag.ChangeInnerDirective</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+    <tag>
+        <name>now</name>
+        <tag-class>com.connor.tag.NowDirective</tag-class>
+        <body-content>empty</body-content>
+
+    </tag>
+
+</taglib>
